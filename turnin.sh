@@ -1,5 +1,4 @@
 #!/bin/bash
-
 MAX=26
 
 # grab hw number
