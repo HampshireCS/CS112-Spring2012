@@ -7,7 +7,8 @@ hw=`echo "$@" | sed "s/^[^1-9]*\([1-9][0-9]*\).*$/\1/"`
 
 # reject a missing number
 if [ -z "$hw" ] || [ "$num" = "$hw" ]; then
-    echo "Could not find homework number"
+    echo "Error: missing homework number"
+    echo "example: ./turnin.sh hw01"
     exit 1
 fi
 
