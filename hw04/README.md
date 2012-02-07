@@ -4,12 +4,14 @@ Problem Set 1
 -----------------------------
 
 For homework four, complete the questions in the following files.
+
  * `sect1_if.py`
  * `sect2_while.py`
  * `sect3_lists.py`
  * `sect4_for.py`
 
 You can safely ignore everything in `hwtools.py`, it just contains some helper functions for doing the homework.  When you are done, run `./turnin.sh hw04` from your project directory.
+
 
 
 ADVANCED:
