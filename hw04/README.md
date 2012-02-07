@@ -21,11 +21,10 @@ Make sure you complete each `[ADVANCED]` question in the homework.  In addtion, 
 1. **`cake.py`**:  Implement a program version of [cake or death](http://youtu.be/BNjcuZ-LiSY).  Here are the rules:
     * Keep asking "cake or death?" until death is selected
     * if the user asks for something else, just ask again
-    * if the user asks for cake, give them one slice
-    * if there is no more cake, politely explain that you are out of cake
-      there is no more cake and ask again
+    * if the user asks for cake, give them a slice
+    * if there is no more cake, politely explain that you are out of cake cake and ask again
     * if the user selects death, describe their death vividly and quit
-2. **`board.py`**:  Make an ascii checkerboard for a given the height and the width.  There are many ways to do this, but make sure your solution uses loops and if statements.
+2. **`board.py`**:  Make an ascii checkerboard for a given height and width.  There are many ways to do this, but make sure your solution uses loops and if statements.
 
 ```
 Example checkerboard:
