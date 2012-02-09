@@ -78,7 +78,7 @@ Finish all the problems in `lists.py`.  Each question only requires a single pyt
 
 # Rings Examples
 > **Basic Rings:**
-> ![Image](https://github.com/HampshireCS/CS112-Spring2012/raw/master/homeworks/hw05/example_rings_basic.png)
+> ![Image](https://github.com/HampshireCS/CS112-Spring2012/raw/master/hw05/example_rings_basic.png)
 >
 > **Advanced Rings:**
-> ![Image](https://github.com/HampshireCS/CS112-Spring2012/raw/master/homeworks/hw05/example_rings_adv.png)
+> ![Image](https://github.com/HampshireCS/CS112-Spring2012/raw/master/hw05/example_rings_adv.png)
