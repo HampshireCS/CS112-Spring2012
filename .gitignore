@@ -1,7 +1,9 @@
 .DS_Store
 .AppleDouble
 
+# Terrible things seen in commits
 :2e*
+*.stackdump
 
 # Thumbnails
 ._*
