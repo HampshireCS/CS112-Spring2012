@@ -31,6 +31,6 @@ while not done:
     draw_tie(screen, [tie_x, tie_y])
     
     pygame.display.flip()
-    clock.tick(15)
+    clock.tick(30)
     
 print "ByeBye"
