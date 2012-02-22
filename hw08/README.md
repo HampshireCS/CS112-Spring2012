@@ -45,4 +45,4 @@ OK
 
 As usual, implement the advanced only portions of the basic homework.  In addition to this, program `adv_nims.py`.  I have laid out all the functions you should need and the main game loop.  Run `python adv_nims_tests.py` to see which pieces you have left to program and what still doesn't work.  Once the tests run without error, your game should just work.
 
-> This method is known as test driven development, where you start with your test cases and keep modifying your functions/code until everything works without error.  This is good for complicated code so you know which parts of your code work and which don't.
+> This is known as test driven development, where you start with your test cases and keep modifying your functions/code until everything works without error.  This is good for complicated code so you know which parts of your code work and which don't.
