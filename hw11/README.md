@@ -5,14 +5,14 @@ Minesweeper
 
 This week's homework is to implement [minesweeper](http://www.2flashgames.com/f/f-145.htm).  Minesweeper is over when every square is revealed or has a flag on it.  Create a version of minesweeper (graphics can be whatever you want)
 
-Requirements:
+**Requirements:**
 
  * Right clicking toggles a flag
  * left clicking reveals the square under it
  * different color numbers, a flag, and a bomb graphic
  * show all the unflagged bombs when the player loses
 
-Food for thought:
+**Food for thought:**
  
  * Easy difficulty is fine (10x10 with 10 mines)
  * make sure you don't accidentally place a mine where there already is one
