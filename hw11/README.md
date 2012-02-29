@@ -24,9 +24,7 @@ Don't forget you can get bonus points by doing some of the advanced section stuf
 
 ## Advanced
 
-### Minesweeper
-
-Requirements:
+**Requirements:**
  
  * a way to change the difficulty in game (resizes window)
  * revealing a blank square clears touching squares
