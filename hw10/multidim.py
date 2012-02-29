@@ -6,8 +6,6 @@ Multidimensional Arrays
 =========================================================
 This section checks to make sure you can create, use, 
 search, and manipulate a multidimensional array.
-
-Every function is part of a larger game, "coinhunt".
 """
 
 
