@@ -1,0 +1,27 @@
+ Name    | Age| Follows
+==============================================================
+ Alice   | 24 | Ralph, Paul, Xander, Bob, Vera
+ Bob     | 22 | Zeek, Sally, Vera
+ Carol   | 20 | Zeek, Frank, Paul, Ralph, Lola, Karl, Vera
+ Damien  | 11 | Uma, Everett, Vera
+ Everett | 13 | Opie, Lola, Ralph, Max, Xander
+ Frank   | 19 | Lola, Jansen
+ George  | 22 | Bob, Vera, Everett
+ Igor    | 27 | Max, Wally, Zeek, Lola, Paul, Ned
+ Jansen  | 31 | Bob, Ned
+ Karl    | 31 | Wally, Zeek, Jansen, Xander
+ Lola    | 31 | Alice, Everett, George
+ Max     |  9 | Zeek, Opie, Ralph, Wally
+ Ned     | 28 | Karl, George, Opie
+ Opie    | 14 | Damien, Carol
+ Paul    | 31 | Bob, Xander, Igor, Sally, Alice, Max, Ned
+ Ralph   | 16 | Sally, Theo, Igor, Karl, Wally, Frank, Damien
+ Sally   | 24 | Everett, Xander
+ Theo    | 30 | Max, Lola, Xander, Paul, Vera
+ Uma     | 30 | Max, Igor, Ned, Karl, Xander
+ Vera    |  8 | George, Ned, Max
+ Wally   | 18 | Bob, Lola, Xander
+ Xander  | 11 | Alice, Everett, Opie, Ralph, Igor, Zeek, Max
+ Yolanda | 18 | Igor, Karl
+ Zeek    | 11 | Uma, Wally, Everett, Yolanda, Frank
+
