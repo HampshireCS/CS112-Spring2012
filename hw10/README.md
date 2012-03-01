@@ -41,7 +41,6 @@ $ python run_tests.py -multidim.distance_from_player
 
 Hopefully this will be easier to use.  That said, I'm looking for feedback on these testing things.  As you get used to them, let me know where you're having trouble with them in the homework and I'll try to fix it for the next time/next year.
 
-
 ## Advanced
 
 In addition to the advanced questions, also fill in the functions for `users.py`.
