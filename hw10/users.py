@@ -35,7 +35,6 @@ def followers(users, *names):
     "find followers for given names"
 
 
-
 # 2. underage_follows
 #      Find everyone that underage users (age <= 12) follow.  Make
 #      sure there are no duplicates.  Do not include the underage
