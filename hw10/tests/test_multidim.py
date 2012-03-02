@@ -5,16 +5,13 @@ from base import unittest, not_implemented, test_for
 @test_for("multidim.find_coins")
 class FindCoinsTest(unittest.TestCase):
     def setUp(self):
-        zeros = [ [0 for i in range(5)] for i in range(5) ]
+        self.empty = [ [0 for i in range(5)] for i in range(5) ]
 
-        self.empty = zeros[:]
-
-        self.diag = zeros[:]
+        self.diag = [ [0 for i in range(5)] for i in range(5) ]
         self.diag[1][1] = 1
         self.diag[3][3] = 1
-        self.diag_answer = [ (1,1), (3,3) ]
 
-        self.room = zeros[:]
+        self.room = [ [0 for i in range(5)] for i in range(5) ]
         self.room[3][4] = 1
         self.room[0][1] = 1
         self.room[2][2] = 1
@@ -23,19 +20,20 @@ class FindCoinsTest(unittest.TestCase):
 
     def test_find_coins_empty(self):
         "room with no coins returns empty list"
-        result = multidim.find_coins(self.zeros)
+        result = multidim.find_coins(self.empty)
         self.assertEqual( len(result), 0)
 
     def test_find_coins_simple(self):
         "coins on the diagonals"
         result = multidim.find_coins(self.diag)
-        result = map(result, tuple)
-        self.assertItemsEqual(result, [ (1,1), (3,3) ])
+        result = [ list(r) for r in result ] 
+        self.assertItemsEqual(result, [ [1,1], [3,3] ])
 
     def test_find_coins(self):
         "finds any coin in room"
         result = multidim.find_coins(self.room)
-        self.assertItemsEqual(result, [ (4,3), (1,0), (2,2), (1,4) ])
+        result = [ list(r) for r in result ] 
+        self.assertItemsEqual(result, [ [4,3], [1,0], [2,2], [1,4] ])
 
 
 @test_for("multidim.distance_from_player")
