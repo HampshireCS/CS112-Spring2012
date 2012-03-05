@@ -4,6 +4,8 @@
 # Terrible things seen in commits
 :2e*
 *.stackdump
+.idlerc
+.idlerc/*.lst
 
 # Thumbnails
 ._*
