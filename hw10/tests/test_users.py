@@ -4,10 +4,7 @@ import pickle
 
 from base import unittest, not_implemented, test_for
 
-ROOT = os.path.dirname(__file__)
-f = open( os.path.join(ROOT, "users.dat"), "rb")
-USERS = pickle.load(f)
-f.close()
+from users_data import USERS
 
 @test_for("users.followers")
 class FollowersTest(unittest.TestCase):
