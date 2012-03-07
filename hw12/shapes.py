@@ -24,7 +24,11 @@
 
 # Advanced Section
 # ---------------------------------------------------------
-# Add one more shape type: a polygon.  
+# Add one more shape type: a polygon.  Polygons are created
+# from a list of at least 3 points.
+#
+# >>> Polygon((0,0), (3,4), (0,4))
+# >>> Polygon((0,0), (2,0), (2,2), (0,2))
 #
 # Perimeter should be easy to calculate, for area, use 
 # method 1 on this site for finding the area of an irregular 
