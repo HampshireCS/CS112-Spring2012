@@ -86,7 +86,7 @@ class PointTest(unittest.TestCase):
 
     @unittest.skipIf("__eq__" not in dir(Point), "Point has no __eq__ method")
     def test_equality(self):
-        self.assertEqual(Point(1,1), Point(1,1))
+        self.assertEqual(Point(2,3), Point(2,3))
         self.assertNotEqual(Point(1,1), [1,1])
         self.assertNotEqual(Point(1,1), Point(1,2))
         self.assertNotEqual(Point(1,1), Point(2,1))
