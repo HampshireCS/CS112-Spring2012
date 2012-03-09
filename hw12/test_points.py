@@ -79,6 +79,19 @@ class PointTest(unittest.TestCase):
         self.assertEqual(result.x, 1, "incorrect x:  Point(1,1).extrapolate(None, 3)")
         self.assertEqual(result.y, 4, "incorrect y:  Point(1,1).extrapolate(None, 3)")
 
+    @unittest.skipIf(Point.__str__ == object.__str__, "Point has no __str__ method")
+    def test_to_string(self):
+        self.assertEqual(str(Point(1,1)), "(1,1)")
+        self.assertEqual(str(Point(1.5,2.0)), "(1.5,2.0)")
+
+    @unittest.skipIf("__eq__" not in dir(Point), "Point has no __eq__ method")
+    def test_equality(self):
+        self.assertEqual(Point(1,1), Point(1,1))
+        self.assertNotEqual(Point(1,1), [1,1])
+        self.assertNotEqual(Point(1,1), Point(1,2))
+        self.assertNotEqual(Point(1,1), Point(2,1))
+        self.assertNotEqual(Point(1,1), Point(2,2))
+
     @unittest.skipIf(not hasattr(Point, "slope"), "Point has no slope method")
     def test_slope(self):
         a = Point(1,1)
