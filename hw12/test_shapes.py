@@ -76,9 +76,12 @@ class CircleTest(unittest.TestCase):
 @unittest.skipIf(not hasattr(shapes, "Polygon"), "No Polygone class defined")
 class PolygonTest(unittest.TestCase):
     def setUp(self):
-        self.poly1 = Polygon((0,0), (1,0), (0,1))
-        self.poly2 = Polygon((0,0), (1,0), (1,1), (0,1))
-        self.poly3 = Polygon((0,0), (1,0), (2,0), (1,1), (0,1))
+        pts1 = (0,0), (1,0), (0,1)
+        pts2 = (0,0), (1,0), (1,1), (0,1)
+        pts3 = (0,0), (1,0), (2,0), (1,1), (0,1)
+        self.poly1 = Polygon(*pts1)
+        self.poly2 = Polygon(*pts2)
+        self.poly3 = Polygon(*pts3)
 
         self.poly1_area = 0.5
         self.poly1_perim = 3.4142135623730951
@@ -87,9 +90,9 @@ class PolygonTest(unittest.TestCase):
         self.poly3_area = 1.5
         self.poly3_perim = 5.4142135623730951
 
-        self.poly1_str = "Polygon(" + ", ".join(map(repr, self.poly1.pts)) + ")"
-        self.poly2_str = "Polygon(" + ", ".join(map(repr, self.poly2.pts)) + ")"
-        self.poly3_str = "Polygon(" + ", ".join(map(repr, self.poly3.pts)) + ")"
+        self.poly1_str = "Polygon(" + ", ".join(map(repr, pts1)) + ")"
+        self.poly2_str = "Polygon(" + ", ".join(map(repr, pts2)) + ")"
+        self.poly3_str = "Polygon(" + ", ".join(map(repr, pts3)) + ")"
 
     def test_is_shape(self):
         self.assertIsInstance(self.poly1, Shape, "Polygons should be Shapes")
