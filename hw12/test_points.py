@@ -2,12 +2,10 @@
 
 try:
     from points import Point
-    no_point = False
 except ImportError:
     class Point(object):
         def __init__(self, *a):
             pass
-    no_point = True
 
 
 try:
@@ -15,7 +13,6 @@ try:
 except ImportError:
     import unittest
 
-@unittest.skipIf(no_point, "Point class is not implemented")
 class PointTest(unittest.TestCase):
 
     def test_init(self):
@@ -52,6 +49,35 @@ class PointTest(unittest.TestCase):
         self.assertEqual(pt.x, 3, "pt.x did not translate by -1 from 4 to 3")
         self.assertEqual(pt.y, 6, "pt.y did not translate by 1 from 5 to 6")
 
+    @unittest.skipIf(not hasattr(Point, "extrapolate"), "Point has no extrapolate method")
+    def test_extrapolate(self):
+        a = Point(1,0)
+        origin = Point(0,0)
+
+        # make sure the right type is returned
+        result = a.extrapolate(1, 1)
+        self.assertTrue(isinstance(a, Point), "return value of extrapolate should be a Point")
+        self.assertFalse(a is result, "return value of extrapolate should be a new Point")
+
+        result = Point(1,1).extrapolate(1, 2)
+        self.assertEqual(result.x, 2.4142135623730949, "incorrect x:  Point(1,1).extrapolate(-1,2)")
+        self.assertEqual(result.y, 2.4142135623730949, "incorrect y:  Point(1,1).extrapolate(-1,2)")
+
+        result = Point(1,1).extrapolate(-1, 2)
+        self.assertEqual(result.x, 2.4142135623730949, "incorrect x:  Point(1,1).extrapolate(1,2)")
+        self.assertEqual(result.y, -0.41421356237309492, "incorrect y:  Point(1,1).extrapolate(1,2)")
+
+        result = Point(1,1).extrapolate(0, 2)
+        self.assertEqual(result.x, 3, "incorrect x:  Point(1,1).extrapolate(0,2)")
+        self.assertEqual(result.y, 1, "incorrect y:  Point(1,1).extrapolate(0,2)")
+
+        result = Point(1,1).extrapolate(0, -2)
+        self.assertEqual(result.x, -1, "incorrect x:  Point(1,1).extrapolate(0,-2)")
+        self.assertEqual(result.y, 1, "incorrect y:  Point(1,1).extrapolate(0,-2)")
+
+        result = Point(1,1).extrapolate(None, 3)
+        self.assertEqual(result.x, 1, "incorrect x:  Point(1,1).extrapolate(None, 3)")
+        self.assertEqual(result.y, 4, "incorrect y:  Point(1,1).extrapolate(None, 3)")
 
     @unittest.skipIf(not hasattr(Point, "slope"), "Point has no slope method")
     def test_slope(self):
