@@ -7,7 +7,7 @@ For this assignment come up with three game ideas (by yourself) that you'd be wi
 
 Focus on one good concept for a game that could feasibly be developed by two students of unknown or unequal skill level.  You will work on it until the end of the semester. This concept can be a moment of play, how it will feel, a game mechanic, etc.  Your project will then be implementing this one idea really well.  This means do not come up with ideas like "sims 3", more like "angry birds". 
 
->>> NOTE: your final game may be a proof-of-concept for a larger project.
+> **NOTE:** your final game may be a proof-of-concept for a larger project.
 
 Advanced students, you are not limited to the use of pygame if there is another library you want to use. We will work together to get whichever library you need working before the end of the semester on at least my laptop and the lab machines.
 
@@ -18,9 +18,9 @@ Advanced students, you are not limited to the use of pygame if there is another 
  * [Youtube](http://www.youtube.com)
 
 ### Tools already installed in Lab (we can get more)
- * Physics - Pymunk
- * Networking - Twisted/Python
- * Menus - PGU
+ * Physics - [Pymunk](http://code.google.com/p/pymunk/)
+ * Networking - [Twisted](http://twistedmatrix.com/trac/)/[Native Python](http://www.tutorialspoint.com/python/python_networking.htm)
+ * Menus - [PGU](http://code.google.com/p/pgu/)
 
 
 ### How to do this homework...
