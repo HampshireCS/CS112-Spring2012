@@ -7,7 +7,7 @@ from pygame.locals import *
 from pygame import Surface
 from pygame.sprite import Sprite
 
-from settings import PLAYER_COLOR, PLAYER_SPEED
+from settings import PLAYER_COLOR, PLAYER_SPEED, PLAYER_SIZE
 
 class Player(Sprite):
 
@@ -16,15 +16,23 @@ class Player(Sprite):
 
         self.bounds = bounds
 
-        self.image = Surface((80, 80))
+        self.image = Surface(PLAYER_SIZE)
         self.rect = self.image.get_rect()
-
-        self.image.fill((0,0,0))
-        self.image.fill(PLAYER_COLOR, self.rect.inflate(-4,-4))
 
         self.x, self.y = bounds.center
         self.vx = PLAYER_SPEED
         self.vy = PLAYER_SPEED
+
+    def on_path(self, b):
+        if b:
+            color = PLAYER_COLOR
+        else:
+            color = 255, 0, 0
+
+        self.image.fill((0,0,0))
+        rect = self.image.get_rect().inflate(-4, -4)
+        self.image.fill(color, rect)
+
 
     def update(self, dt):
         dt = dt / 1000.0

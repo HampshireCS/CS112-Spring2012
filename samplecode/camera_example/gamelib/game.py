@@ -9,8 +9,10 @@ from pygame.sprite import spritecollide
 
 from camera import Camera
 from coin import CoinGroup
+from images import ImageManager
 from level import Level
 from player import Player
+from tilesheet import TileSheet
 
 from settings import FPS, COIN_N_STARTING
 
@@ -20,7 +22,8 @@ class Game(object):
     def __init__(self, screen):
         self.screen = screen
 
-        self.level = Level()
+        tilesheet = TileSheet(ImageManager().load("tiles"), (32, 32))
+        self.level = Level("test_level", tilesheet)
         self.player = Player(self.level.bounds) 
         self.coins = CoinGroup(self.level.bounds)
 
@@ -48,6 +51,10 @@ class Game(object):
         # basic update
         self.player.update(dt)
         self.coins.update(dt)
+
+        # check if the player is on the path
+        onpath = spritecollide(self.player, self.level.path, False)
+        self.player.on_path(onpath)
 
         # collide coins
         for coin in spritecollide(self.player, self.coins, True):

@@ -3,14 +3,14 @@ from random import randrange
 from pygame import Surface
 from pygame.sprite import Sprite, Group
 
-from settings import COIN_COLOR, COIN_SPAWN_RATE
+from settings import COIN_COLOR, COIN_SPAWN_RATE, COIN_SIZE
 
 class Coin(Sprite):
 
     def __init__(self, loc):
         Sprite.__init__(self)
 
-        self.image = Surface((30, 30))
+        self.image = Surface(COIN_SIZE)
         self.rect = self.image.get_rect()
 
         self.image.fill((0,0,0))
