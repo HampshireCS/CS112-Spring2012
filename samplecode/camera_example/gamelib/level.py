@@ -23,7 +23,7 @@ class Level(object):
         rows = self.bounds.height/20
         cols = self.bounds.width/20
 
-        self.background.fill((0,0,0))
+        self.background.fill((50,50,50))
         for y in range(rows):
             for x in range(cols):
                 self.background.fill((80,80,80), (x*20 + 2, y*20 + 2, 18, 18))

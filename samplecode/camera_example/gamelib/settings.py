@@ -1,6 +1,16 @@
-## GAME SETTINGS
+## GAME
 FPS = 60
 SCREEN_SIZE = scr_w, scr_h = 800,800
 
-## LEVEL SETTINGS
-LEVEL_SIZE = int(1.5 * scr_w), int(1.5 * scr_h)
+## LEVEL
+LEVEL_SIZE = int(1.25 * scr_w), int(1.25 * scr_h)
+
+## PLAYER
+PLAYER_COLOR = 0,150,0
+PLAYER_SPEED = 240
+
+
+## COINS
+COIN_COLOR = 255, 255, 0 
+COIN_SPAWN_RATE = 3
+COIN_N_STARTING = 30

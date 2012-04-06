@@ -2,31 +2,43 @@
 player.py
 
 """
-
+import pygame
+from pygame.locals import *
 from pygame import Surface
 from pygame.sprite import Sprite
 
+from settings import PLAYER_COLOR, PLAYER_SPEED
+
 class Player(Sprite):
 
-    def __init__(self, level):
+    def __init__(self, bounds):
         Sprite.__init__(self)
 
-        self.level = level
+        self.bounds = bounds
 
-        self.image = Surface((120, 80))
-        self.image.fill((0,150,0))
+        self.image = Surface((80, 80))
         self.rect = self.image.get_rect()
 
-        self.x, self.y = level.bounds.center
-        self.vy = 5
+        self.image.fill((0,0,0))
+        self.image.fill(PLAYER_COLOR, self.rect.inflate(-4,-4))
+
+        self.x, self.y = bounds.center
+        self.vx = PLAYER_SPEED
+        self.vy = PLAYER_SPEED
 
     def update(self, dt):
-        self.y += self.vy
-
-        if self.y < self.level.bounds.top or self.y > self.level.bounds.bottom:
-            self.vy = -self.vy
-            self.y += 2 * self.vy
-
+        dt = dt / 1000.0
+        keys = pygame.key.get_pressed()
+        if keys[K_UP]:
+            self.y -= self.vy * dt
+        if keys[K_DOWN]:
+            self.y += self.vy * dt
+        if keys[K_LEFT]:
+            self.x -= self.vx * dt
+        if keys[K_RIGHT]:
+            self.x += self.vx * dt
 
         # update player 
+        self.rect = self.image.get_rect()
         self.rect.center = int(self.x), int(self.y)
+        self.rect.clamp_ip(self.bounds)
