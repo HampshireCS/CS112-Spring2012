@@ -49,6 +49,10 @@ class Game(object):
         self.player.update(dt)
         self.coins.update(dt)
 
+        # move coins toward player
+        for coin in self.coins:
+            coin.move_toward(self.player, dt)
+
         # collide coins
         for coin in spritecollide(self.player, self.coins, True):
             self.score += 1
