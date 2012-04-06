@@ -86,6 +86,12 @@ def main():
         score_text = font.render("Score: %08d"%score, False, (255, 255, 255))
         screen.blit(score_text, (5, 5))
 
+        if not player.alive():
+            gameover = font.render("Press Space to Respawn", False, (255, 255, 255))
+            rect = gameover.get_rect()
+            rect.center = screen.get_rect().center
+            screen.blit(gameover, rect)
+
         pygame.display.flip()
 
         clock.tick(30)
