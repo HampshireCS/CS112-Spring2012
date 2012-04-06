@@ -10,4 +10,7 @@ def main():
 
     # create game
     game = Game(screen)
-    game.run()
+    try:
+        game.run()
+    except KeyboardInterrupt:
+        game.quit()
