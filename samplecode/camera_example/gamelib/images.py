@@ -26,11 +26,13 @@ class ImageManager(object):
         if name not in self._images:
             path = os.path.join(DATA_DIR, "images", name) + ".bmp"
             image = pygame.image.load(path).convert()
-            if colorkey:
-                if colorkey == -1:
-                    colorkey = image.get_at((0,0))
-                image.set_colorkey(colorkey)
-
             self._images[name] = image
 
-        return self._images[name].convert()
+        image = self._images[name].convert()
+        if colorkey:
+            if colorkey == -1:
+                colorkey = image.get_at((0,0))
+            image.set_colorkey(colorkey)
+
+
+        return image
