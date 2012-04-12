@@ -84,6 +84,7 @@ Add a method `get_rects` which fetches every rectangle out of a QuadTree.  This 
 Add a method `collidepoint` which returns the smallest QuadTreeNode which collides with a given point.
 
 **Requirements:**
+
  * if the point is not within the QuadTreeNode, return None
  * if the QuadTreeNode is not split and the point collides, return itself
  * if the QuadTreeNode is split, return collidepoint for the child
