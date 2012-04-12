@@ -12,8 +12,7 @@ As you add the methods in this homework, run `test_quad.py` to run the normal ba
 > `rundemo` is a python file so can just be opened in IDLE on Windows.
 
 
-Getting the Points (get_points)
---------------------------------
+### Getting the Points (get_points)
 
 Add a method `get_points` to QuadTreeNode.  This method will fetch a list of every point stored in a QuadTreeNode and it's children.  Since each 
 
@@ -43,8 +42,7 @@ Add a method `get_points` to QuadTreeNode.  This method will fetch a list of eve
 
 
 
-Getting Rects (quadrents)
---------------------------------
+### Getting Rects (quadrents)
 
 Add a method `get_rects` which fetches every rectangle out of a QuadTree.  This includes the root node and its children if it has any and so on.  This should be a flat list of rectangles (not lists in lists).
 
@@ -78,9 +76,10 @@ Add a method `get_rects` which fetches every rectangle out of a QuadTree.  This 
 [<rect(0, 0, 100, 100)>, <rect(0, 0, 50, 50)>, <rect(0, 0, 25, 25)>, <rect(25, 0, 25, 25)>, <rect(0, 25, 25, 25)>, <rect(25, 25, 25, 25)>, <rect(25, 0, 25, 25)>, <rect(0, 25, 25, 25)>, <rect(25, 25, 25, 25)>]
 ```
 
-[Advanced] Collide Point with QuadTree (collidepoint)
+Advanced 
 --------------------------------------------------------
 
+### Collide Point with QuadTree (collidepoint)
 Add a method `collidepoint` which returns the smallest QuadTreeNode which collides with a given point.
 
 **Requirements:**
