@@ -24,7 +24,8 @@ class CoinSprite(Sprite):
         ratio = 1.0 * self.coin.life / settings.COIN_LIFE
 
         self.image.fill((0,0,0))
-        self.image.fill((255,255 * ratio,0), rect.inflate(-4,-4))
+        if ratio >= 0:
+            self.image.fill((255,255 * ratio,0), rect.inflate(-4,-4))
 
     def update(self):
         self.redraw()
