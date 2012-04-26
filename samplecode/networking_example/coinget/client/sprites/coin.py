@@ -15,9 +15,10 @@ class CoinSprite(Sprite):
         self.rect = self.image.get_rect()
 
         self.rect.center = coin.rect.center
-
         self.coin = coin
         dispatcher.connect(self.kill, signal=signals.DEL_OBJECT, sender=coin)
+        self.redraw()
+
     def redraw(self):
         rect = self.image.get_rect()
         ratio = 1.0 * self.coin.life / settings.COIN_LIFE
@@ -25,6 +26,8 @@ class CoinSprite(Sprite):
         self.image.fill((0,0,0))
         self.image.fill((255,255 * ratio,0), rect.inflate(-4,-4))
 
+    def update(self):
+        self.redraw()
 
 class CoinGroup(Group):
     def __init__(self):
