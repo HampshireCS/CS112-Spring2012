@@ -3,12 +3,10 @@ from random import randint, randrange
 from pygame import Color
 
 def player_color():
-    color = [ randrange(128,256) for _ in range(3) ]
-
-    num_channels = randint(1,2)
-    for i in range(num_channels):
+    color = [ 0, 0, 0 ]
+    for i in range(randrange(1,3)):
         channel = randrange(3)
-        color[channel] = 0
+        color[channel] = randrange(128,256)
 
     return Color(*color)
 
