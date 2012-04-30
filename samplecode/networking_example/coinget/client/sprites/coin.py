@@ -28,6 +28,8 @@ class CoinSprite(Sprite):
             self.image.fill((255,255 * ratio,0), rect.inflate(-4,-4))
 
     def update(self):
+        if self.coin.identifier not in self.coin.world._objects:
+            self.kill()
         self.redraw()
 
 class CoinGroup(Group):
