@@ -14,7 +14,11 @@ class PlayerSprite(Sprite):
         self.image = pygame.Surface(player.rect.size)
         self.rect = self.image.get_rect()
 
-        self.image.fill((0,0,0))
+        if self.player.local:
+            border = 255,255,255
+        else:
+            border = 0,0,0
+        self.image.fill(border)
         self.image.fill(player.color, self.rect.inflate(-4,-4))
 
         self.rect.center = player.rect.center
