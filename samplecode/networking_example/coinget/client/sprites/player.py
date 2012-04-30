@@ -14,7 +14,7 @@ class PlayerSprite(Sprite):
         self.image = pygame.Surface(player.rect.size)
         self.rect = self.image.get_rect()
 
-        if self.player.local:
+        if player.local:
             border = 255,255,255
         else:
             border = 0,0,0
