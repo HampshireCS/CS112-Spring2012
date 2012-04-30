@@ -20,6 +20,7 @@ class PlayerSprite(Sprite):
         self.rect.center = player.rect.center
 
         self.player = player
+        print "local", self.player.local
         dispatcher.connect(self.kill, signal=signals.DEL_OBJECT, sender=player)
 
     def update(self):

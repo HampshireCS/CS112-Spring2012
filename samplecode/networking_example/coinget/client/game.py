@@ -44,6 +44,7 @@ class GameState(Application.State):
         self.world = world
         self.network = network
         self.player = player
+        self.player.local = True
 
         self.controller = PlayerController(player)
 

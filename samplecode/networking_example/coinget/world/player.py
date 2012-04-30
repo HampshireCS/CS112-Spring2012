@@ -19,6 +19,7 @@ class Player(WorldObject):
         self.vx, self.vy = vel
         self.x, self.y = pos
         self.rect.center = pos
+        self.local = False
 
         dispatcher.connect(self.move, signal=signals.MOVE_PLAYER, sender=self)
 
