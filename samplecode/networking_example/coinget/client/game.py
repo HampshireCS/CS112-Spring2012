@@ -1,5 +1,6 @@
 from louie import dispatcher
 import pygame
+from pygame.locals import *
 
 from coinget import signals
 
