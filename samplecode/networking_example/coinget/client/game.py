@@ -58,7 +58,10 @@ class GameState(Application.State):
             self.players.add_sprite(player)
 
     def handle_event(self, event):
-        self.controller.handle_event(event)
+        if event.type == KEYDOWN and event.key == K_ESCAPE:
+            self.app.quit()
+        else:
+            self.controller.handle_event(event)
 
     def update(self, dt):
         self.world.update(dt)
